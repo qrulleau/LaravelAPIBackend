@@ -23,7 +23,8 @@ class TodoFactory extends Factory
     {
         return [
             'text' => $this->faker->sentence(),
-            'completed' => $this->faker->boolean()
+            'completed' => $this->faker->boolean(),
+            'user_id' => random_int(1,3),
         ];
     }
 }
