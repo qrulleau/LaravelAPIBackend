@@ -16,7 +16,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-      return new TodoCollection(auth('api')->user()->todos());
+      return new TodoCollection(auth('api')->user()->todos);
     }
 
     /**

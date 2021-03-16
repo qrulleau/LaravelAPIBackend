@@ -20,12 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::apiResource('todos', TodoController::class);
-
 Route::middleware('auth:api')->group(function() {
-  //Route::apiResource('todos', TodoController::class);
+  Route::apiResource('todos', TodoController::class);
 });
-// Route::apiResource('todos',TodoController::class);
 
 Route::prefix('auth')
   ->middleware('api')
